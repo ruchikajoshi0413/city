@@ -1,0 +1,63 @@
+<h1>How Much is Auto Insurance in Chicago?</h1>
+  <p class="w-50">Your exact car insurance rate will vary on several factors. Common factors that impact your auto
+    insurance premium include:</p>
+      
+        <div class="container-fluid">
+          <div class="row"> 
+            <div class="col-sm-6 p-0">
+              <div class="flex-item">
+                <ul> 
+                  <% Stateproduct.all.each do |product|%>             
+                    <li><%= product.entries %></li>
+                  <% end %>
+                </ul>
+              </div>
+      
+                <p class="pt-3">Each insurance provider sets their own rate based on your answers. That’s why it’s important
+                  to shop around and compare your options. </p>
+            </div>
+              <div class="col-sm-6">
+              <% product = Stateproduct.find(1)%>    
+                <img src="<%= product.image %>" alt="Ruchika", class= "img-fluid" >
+              </div>
+            </div>
+          </div>
+        
+     
+
+
+      <%# <h1>How Much is Auto Insurance in Chicago?</h1>
+      <p class="w-50">Your exact car insurance rate will vary on several factors. Common factors that impact your auto
+        insurance premium include:</p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 p-0">
+            <div class="flex-item">
+              <ul>
+                <li>Insurance Provider</li>
+                <li>Age Group</li>
+                <li>Credit Score</li>
+                <li>Gender</li>
+                <li>Marital Status</li>
+                <li>Coverage Limits You Choose</li>
+                <li>Driving Record</li>
+                <li>Household or Vehicle Usage Information </li>
+                <li>Type of Vehicle and its Use<br>
+                  <small>(including annual mileage and distance to work)</small>
+                </li>
+              </ul>
+            </div>
+
+            <p class="pt-3">Each insurance provider sets their own rate based on your answers. That’s why it’s important
+              to shop around and compare your options. </p>
+
+          </div>
+          <div class="col-sm-6"> %>
+            <%#= image_tag 'car.png',class: "img-fluid" %>
+            <%# <img src="assets/images/car.png" class="img-fluid"> %>
+          <%# </div>
+        </div>
+      </div>
+  %>
+
+   

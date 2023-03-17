@@ -1,0 +1,38 @@
+
+        <div class="row divider">
+            <div class="col-sm-6">
+                <ul>
+                    <% Chicagohighlight2.all.each do |chicago|%> 
+                        <li><%= chicago.name %></li>
+                    <% end %>
+                </ul>
+            </div>
+            <% chicago = Chicagohighlight2.find(1)%> 
+                      
+                <div class="col-sm-6">       
+                    <img src= "<%= chicago.image %>", class = "img-fluid" > 
+                </div>          
+            
+        </div>
+
+
+<%# <div class="row divider">
+        <div class="col-sm-6">
+          <ul>
+            <li>Get to the <strong>94th floor of 875 North Michigan Avenue</strong> (formerly The John Hancock Center)
+              for some fun at <strong>Cloudbar</strong> and <strong>Tilt</strong></li>
+            <li>Explore <strong>local farmer’s markets</strong> and <strong>dive bars</strong></li>
+            <li>Enjoy a water taxi along the <strong>West Loop, Michigan Ave, The Riverwalk, Goose Island,
+                Chinatown</strong> or <strong>Chicago Ave</strong></li>
+            <li>Hit up historic sites like <strong>Wrigley Field, Buckingham Fountain, Graceland Cemetery, Union
+                Station, Frank Lloyd Wright’s sites, Chicago Cultural Center</strong></li>
+            <li>Visit iconic places like <strong>The Art Institute, Field Museum, Museum of Science and Industry, Adler
+                Planetarium, Shedd Aquarium, National Museum of Mexican Art, DuSable Black History Museum and Education
+                Center</strong> and more!</li>
+          </ul>
+        </div>
+        <div class="col-sm-6"> %>
+          <%#= image_tag 'farmers-market.png',class: "img-fluid" %>
+          <%# <img src="assets/images/farmers-market.png" class="img-fluid" /> %>
+        <%# </div>
+</div> %>

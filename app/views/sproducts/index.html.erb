@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sproducts</h1>
+
+<div id="sproducts">
+  <% @sproducts.each do |sproduct| %>
+    <%= render sproduct %>
+    <p>
+      <%= link_to "Show this sproduct", sproduct %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sproduct", sproducts_path(format: 'pdf') %>

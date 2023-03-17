@@ -1,0 +1,32 @@
+<%= form_with(model: ruchika) do |form| %>
+  <% if ruchika.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ruchika.errors.count, "error") %> prohibited this ruchika from being saved:</h2>
+
+      <ul>
+        <% ruchika.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

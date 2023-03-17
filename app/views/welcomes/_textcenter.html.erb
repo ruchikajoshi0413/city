@@ -1,0 +1,112 @@
+<div class="specialize text-center">
+  <h1>We Specialize in Finding Policies for different Drivers:</h1>
+    <div class="container-fluid">
+      
+        <% Textcenter.all.each do |text|%>
+          <div class="row">
+            <% if text&.alignment == "Right" %>
+              <div class="col-sm-6 left-section">
+                  <strong><h2><%= text.title %></h2></strong>      
+                  <p><%= text.description %></p>
+              </div> 
+              <div class="col-sm-6 right_col">
+                  <img src="<%= text.image %>", class= "img_banner"  alt="Ruchika" >
+              </div> 
+              <hr class="solid"> 
+              <% else %>
+                <div class="col-sm-6 right_col">
+                    <img src="<%= text.image %>", class= "img_banner"  alt="Ruchika" >
+                </div> 
+
+                <div class="col-sm-6 left-section">
+                  <strong><h2><%= text.title %></h2></strong>      
+                  <p><%= text.description %></p>
+                </div> 
+                
+                <hr class="solid"> 
+            <% end %> 
+          </div>
+        <% end %>
+      
+    </div>  
+
+
+
+
+      <%# <h1>We Specialize in Finding Policies for different Drivers:</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 left-section">
+            <h2>SR-22</h2>
+            <p>An SR-22 is an auto insurance document that proves you’ve met your state’s minimum liability coverage. It
+              can be required by your state or by a court order for some drivers. The insurance company files the SR-22
+              on your behalf with your Secretary of State. </p>
+          </div>
+          <div class="col-sm-6 right_col">
+            <%= image_tag 'graphic_SR22.svg',class: "img_banner" %>
+            <%# <img src="assets/images/graphic_SR22.svg" class="img_banner"> 
+          </div>
+
+          <hr class="solid">
+          <div class="col-sm-6 right_col">
+            <%= image_tag 'graphic_non-owner.svg',class: "img_banner" %>
+            <%# <img src="assets/images/graphic_non-owner.svg" class="img_banner"> 
+          </div>
+
+          <div class="col-sm-6 left-section pr-0">
+            <h2>No/Unlicensed or never licensed</h2>
+            <p class="block">
+              If you're a vehicle owner without a valid driver's license, you still need auto insurance for the vehicle
+              if it is driven. We can help you find the right auto insurance coverage.
+            </p>
+
+            <p class="block">
+              A point surcharge, depending upon the age of the rated operator, will apply to operators who have no
+              license and have never had a valid U.S. license or have a foreign or international driver's license.
+            </p>
+
+            <p class="block">
+              This surcharge may be removed only if a valid driver's license is obtained, and we receive notification of
+              the valid driver's license number.
+
+            </p>
+          </div>
+
+
+          <hr class="solid">
+
+          <div class="col-sm-6 left-section">
+            <h2>International licensed</h2>
+            <p>Non-U.S. citizens who can legally drive in the U.S. may need auto insurance. If you are a foreigner who
+              requires car insurance, you’ll need an International Driving Permit document and a valid home state
+              driver’s license to get coverage. Both documents are needed to legally operate a motor vehicle while in
+              the U.S. </p>
+          </div>
+          <div class="col-sm-6 right_col">
+            <%= image_tag 'graphic_internationl-licensed.svg',class: "img_banner" %>
+            <%# <img src="assets/images/graphic_internationl-licensed.svg" class="img_banner"> 
+          </div>
+          <hr class="solid">
+
+
+          <div class="col-sm-6 right_col">
+            <%= image_tag 'graphic_no-unlicensed-never-licensed.svg',class: "img_banner" %>
+            <%# <img src="assets/images/graphic_no-unlicensed-never-licensed.svg" class="img_banner">
+          </div>
+
+          <div class="col-sm-6 left-section">
+            <h2>Non-Owner</h2>
+            <p class="block">You can get car insurance even if you don’t own a vehicle. People who drive often, including using a
+              borrowed or rented car, may need a non-owner car insurance policy. Non-owner auto insurance provides
+              liability coverage for injuries or damages you cause, even though the vehicle is owned by someone else.
+              This type of policy is helpful if the vehicle owner’s policy limits are too low to cover the costs of an
+              incident or if you’re not covered under the owner’s policy. </p>
+          </div>
+
+          <hr class="solid">
+
+
+        </div>
+
+      </div> %>
+</div>

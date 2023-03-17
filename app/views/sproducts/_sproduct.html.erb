@@ -1,0 +1,25 @@
+<div id="<%= dom_id sproduct %>">
+  <p>
+    <strong>Title:</strong>
+    <%= sproduct.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= sproduct.description %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%#= sproduct.image %>
+    <img src= "<%= sproduct.image %>" > 
+  </p>
+
+  <p>
+    <strong>Alignment:</strong>
+    <%= sproduct.alignment %>
+  </p>
+
+    <%#= link_to "pdf" ,sproducts_pdf_path(sproduct) %>
+     <%= link_to "pdf" ,sproducts_path(format:'pdf') %>
+</div>

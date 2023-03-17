@@ -1,0 +1,43 @@
+<div class="state-container highlights insureonline">
+     
+        <div class="row">
+           
+          <div class="col-sm-6">
+          <% Highlight.all.each do |highlight|%>
+            <h1><%= highlight.heading %></h1>                 
+            <%= highlight.body %> 
+          <% end %> 
+          </div>    
+      
+          <div class="col-sm-6">
+            <% highlight = Highlight.find(1)%>
+              <img src="<%= highlight.image %>" alt="Ruchika", class= "img-fluid" >
+          </div>
+        </div>
+</div>
+
+<%# <div class="state-container highlights insureonline">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Hi, We’re InsureOnline.Com! </h1>
+          <p>We’re into helping you find the right insurance to meet your needs and budget. Our agents are licensed and
+            certified to write auto, home, life, health, commercial and specialty lines of insurance. We’re relentless
+            in finding the best affordable options for you, your family, or your business. That’s why we’ve partnered
+            with many highly rated insurance companies. Backed by years of industry experience, we help make buying
+            insurance easy, fast, and simple.</p>
+
+          <h1>We’re More Than Car Insurance.</h1>
+          <p>Car insurance is just the beginning. If you’re like most people, you need more than auto insurance
+            coverage. We have multiple options for individuals, families, and business owners. Contact us about our
+            home, life, health, commercial and specialty insurance lines. We’ll work hard to find an affordable policy
+            with a great provider that gets you the protection you need.</p>
+
+        </div>
+        <div class="col-sm-6"> %>
+        <%#= image_tag 'insureonline-mobile.png',class: "img-fluid" %>
+          <%# <img src="assets/images/insureonline-mobile.png" class="img-fluid"> %>
+        <%# </div>
+
+      </div>
+</div> %>
+

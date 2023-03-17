@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= javascript_include_tag Ckeditor.cdn_url %>
+
+<%= render @sproduct %>
+
+<div>
+  <%= link_to "Edit this sproduct", edit_sproduct_path(@sproduct) %> |
+  <%= link_to "Back to sproducts", sproducts_path %>
+
+  <%= button_to "Destroy this sproduct", @sproduct, method: :delete %>
+</div>

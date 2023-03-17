@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ruchikas</h1>
+
+<div id="ruchikas">
+  <% @ruchikas.each do |ruchika| %>
+    <%= render ruchika %>
+    <p>
+      <%= link_to "Show this ruchika", ruchika %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ruchika", new_ruchika_path %>

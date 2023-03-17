@@ -1,0 +1,46 @@
+<div class="state-container">
+      <div class="title-section">
+        <h1>What Are the Legal Requirements for Car Insurance in Illinois? </h1>
+      </div>
+
+      <% Statecontainer.all.each do |state|%>  
+              
+        <div class="custom-list">
+          <div class="icons_legal"><img src="<%= state.image %>" ></div>          
+            <div class="text-container"><%= state.description %></div>
+        </div>
+      <% end %>
+</div>
+
+      <%# <div class="title-section">
+        <h1>What Are the Legal Requirements for Car Insurance in Illinois? </h1>
+      </div>    
+
+      <p>The State of Illinois has legal minimum requirements for car insurance. Chicago drivers need both liability
+        coverage and uninsured/underinsured motorist coverage.</p>
+
+      <div class="custom-list">
+        <div class="icons_legal"><%= image_tag 'liability-coverage-2.svg' %>
+        <%# </div> %>
+        
+        <%# <div class="text-container"><b>Liability coverage</b> protects your assets in case you’re found responsible for
+          damages in a covered
+          accident. Illinois requires bodily injury for a minimum of $25,000 per person (with a total max of $50,000 per
+          incident) and property damage for $25,000 for damages to someone else’s property.</div>
+      </div>
+
+
+      <div class="custom-list"> %>
+        <%# <div><%= image_tag 'underinsured-motorist-2.svg' %>
+        <%# </div> 
+        <div class="text-container"><b>Uninsured/underinsured motorist</b> coverage for bodily injury may help cover
+          costs for you or others in
+          your vehicle when the other driver is uninsured or underinsured. Illinois requires bodily injury for a minimum
+          of $25,000 per person (with a total max of $50,000 per incident). </div>
+      </div>
+
+      <p>State minimums are just that—the minimum. You can buy coverage with higher limits to help cover costs from
+        lawsuits or damages beyond the minimum legal requirements for an additional premium.</p>
+
+      <p>Your unique situation will determine what coverage is best for you. One of our licensed insurance agents will
+        be happy to talk with you about your options.</p> %>

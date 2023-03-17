@@ -1,0 +1,19 @@
+<div id="<%= dom_id ruchika %>">
+  <p>
+    <strong>Title:</strong>
+    <%= ruchika.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= ruchika.body %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%#= ruchika.image %>
+    <img src= "<%= ruchika.image %>" > 
+  </p>
+
+    <%= link_to "pdf" ,ruchikas_path(format:'pdf') %>
+</div>

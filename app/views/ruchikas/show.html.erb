@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ruchika %>
+
+<div>
+  <%= link_to "Edit this ruchika", edit_ruchika_path(@ruchika) %> |
+  <%= link_to "Back to ruchikas", ruchikas_path %>
+
+  <%= button_to "Destroy this ruchika", @ruchika, method: :delete %>
+</div>

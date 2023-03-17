@@ -1,0 +1,79 @@
+<div class="state-products">
+      <div class="container-fluid">
+
+            <% Stateproduct2.all.each do |product|%> 
+              <div class="row">
+                <% if product&.alignment == "Left" %>
+                      <div class="col-sm-6">
+                        <img src="<%= product.image %>" alt="Ruchika", class= "img-fluid" >
+                      </div>
+                      <div class="col-sm-6 p-0">              
+                        <h1><%= product.title %></h1>
+                        <%= product.description %>
+                        <%= product.alignment %>
+                      </div>
+                    <% else %>
+                      <div class="col-sm-6 p-0">              
+                        <h1><%= product.title %></h1>
+                        <%= product.description %>
+                        <%= product.alignment %>
+                      </div>
+                      <div class="col-sm-6">
+                        <img src="<%= product.image %>" alt="Ruchika", class= "img-fluid" >
+                      </div>
+                <% end %>
+                
+              </div>   
+            <% end %>
+
+      </div> 
+</div> 
+    <%# <div class="state-products">
+      <div class="container-fluid">
+        <div class="row">   %>
+            <%#= image_tag 'girl-driving.png',class: "img-fluid" %>
+            <%# <img src="assets/images/girl-driving.png" class="img-fluid"> %>
+        
+
+          <%# <div class="col-sm-6 p-0">
+            <h1>Driving in Chicago</h1>
+            <p>There are about <strong>1.5 million vehicles on the road in Chi-town[<span>1</span>] .</strong> That
+              turns into a lot of traffic!
+              Anyone who has driven during rush hour knows how uncertain driving in the Windy City can be.</p>
+            <p><strong>Chicago is on a grid</strong>, meaning almost all streets run north-south or east-west. This
+              design is a big help
+              if you aren’t familiar with where you’re going. And if you ever miss a turn, you can get back on track by
+              taking the next turn. Pay close attention to one-way streets, speed bumps and travelers in the bike lane.
+            </p>
+            <p>There is a complex interstate system. You might hear freeways called <strong>The Kennedy,
+                Tri-State</strong>, and <strong>The
+                Stevenson</strong>, or you may hear them referred to as <strong>I-90</strong>, <strong>I-294</strong>,
+              and <strong>I-55</strong>. During rush hour, the express
+              traffic lane may open, and, during certain times, emergency lanes turn into bus lanes. All of this can
+              make driving in the city tricky especially for inexperienced drivers. </p>
+
+          </div>
+        </div>
+      </div>
+    </div> %>
+
+
+    <%# <div class="state-products">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 p-0">
+            <h1>Parking in The Windy City</h1>
+            <p>Parking can be a struggle especially if you’re visiting tourist areas. Read parking signs so you can
+              avoid a parking ticket or towing. Some blocks require special permits to park. Others may ban parking
+              during certain hours or days of the week, so keep that in mind when parking. Don’t forget to pay at the
+              pay station if required to.
+            </p>
+
+          </div>
+          <div class="col-sm-6">
+            <%= image_tag 'car-parking.png',class: "img-fluid" %>
+            <%# <img src="assets/images/car-parking.png" class="img-fluid"> %>
+          <%# </div>
+        </div>
+      </div>
+    </div> %>

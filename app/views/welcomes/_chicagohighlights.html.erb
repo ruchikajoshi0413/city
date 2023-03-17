@@ -1,0 +1,46 @@
+
+<h1>What to See in Chicago</h1>
+        <div class="row">
+          <% chicago = Chicagohighlight.find(1)%> 
+
+            <div class="col-sm-6">       
+                <img src= "<%= chicago.image %>", class = "img-fluid" > 
+            </div>          
+            <div class="col-sm-6">
+                <ul>
+                  <% Chicagohighlight.all.each do |chicago|%> 
+                    <li><%= chicago.name %></li>
+                  <% end %>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+      <%# <h1>What to See in Chicago</h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <%= image_tag 'bean-chicago.png',class: "img-fluid" %>
+          <%# <img src="assets/images/bean-chicago.png" class="img-fluid" /> %>
+        <%# </div>
+        <div class="col-sm-6">
+          <ul>
+            <li>Bike the <strong>Bloomingdale Trail</strong>, The <strong>606</strong> or <strong>Grant Park</strong>
+            </li>
+            <li>Snap a few selfies in front of <strong>“The Bean”</strong> (Cloud Gate) in <strong>Millennium
+                Park</strong></li>
+            <li>Bring the family to <strong>Navy Pier</strong> for a day of fun </li>
+            <li>Catch a comedy show at <strong>Laugh Factory, Second City</strong> or <strong>Zanies</strong></li>
+            <li>Enjoy live music at the <strong>Green Mill Cocktail Lounge</strong>, The <strong>House of Blues</strong>
+              or <strong>The Aragon Ballroom</strong> </li>
+            <li>Take a ride on <strong>The Ledge at Skydeck</strong> inside <strong>Willis Tower</strong> </li>
+            <li>Kayak on <strong>The Chicago River</strong></li>
+          </ul>
+        </div>
+      </div> %> 
+
+     
+
+
+

@@ -1,0 +1,41 @@
+<div class="sub-wrapper auto-insurance-section">
+  <h1>Need Auto Insurance?</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <% Autoinsurance.all.each do |auto|%> 
+              <div class="online-quote">
+                  <img src="<%= auto.image %>" alt="Ruchika" >
+                  <span><%= auto.name %></span>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-sm-12 col-md-2">
+            <div class="or-section">
+              Or
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="contactus-section">
+              <div class="phone">
+              <%= image_tag 'icon_phone.svg' %>
+                <div class="contact-number">
+                  <div class="text">Call us at</div>
+                  <div class="phone-number">844-358-5605</div>
+                </div>
+              </div>
+              <div class="chat">            
+                <%= image_tag 'icon_chat.svg' %>
+                <div>
+                  <h3>Chat with us Online</h3>
+                  <p>by clicking the chat bubble on this page</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+

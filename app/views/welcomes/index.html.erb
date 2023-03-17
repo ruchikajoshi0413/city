@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<%= javascript_include_tag Ckeditor.cdn_url %>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.00, minimum-scale=1.00, maximum-scale=1.00, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Fav Icon-->
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <title>IndmsureOnline</title>
+  <!-- Bootstrap CSS-->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Fonawesome CSS-->
+  <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+  <!-- Custom Styles CSS-->
+  <link href="assets/custom-styles/custom-styles.css" rel="stylesheet" />
+  <!-- Jqery-->
+  <script src="assets/bootstrap/js/jquery.slim.min.js"></script>
+  <!-- popper.min.js-->
+  <script src="assets/bootstrap/js/popper.min.js"></script>
+  <!--bootstrap.min.js-->
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <header class="header">
+      <%= image_tag 'logoMain.png' %>
+      <%# <img class="logo" src="assets/images/logoMain.png"> %>
+      <button class="=btn btn-orange">Get a quote</button>
+    </header>
+
+    <!--Project head-->
+      <%= render partial: 'welcomes/project' %>
+    
+    <!--insurance-->
+      <%#= render partial: 'welcomes/insurance' %>
+
+      <% @insurances.each_slice(4).each do |insure| %>
+        <%= render 'insurance', insurance: insure %>
+      <% end %> 
+    
+    <!-- State Container Section-->
+      <%#= render partial: 'welcomes/statecontainer' %>
+
+      <% @statecontainers.each_slice(5).each do |state| %>
+        <%= render 'statecontainer', statecontainer: state %>
+      <% end %> 
+    <!--End State Container Section-->
+
+
+    <!--State Products-->
+     <div class="state-products">
+        <%#= render partial: 'welcomes/stateproduct' %>
+        <% @stateproducts.each_slice(9).each do |product| %>
+          <%= render 'stateproduct', stateproduct: product %>
+        <% end %> 
+
+        <% @stateproduct2s.each_slice(2).each do |product| %>
+          <%= render 'stateproduct2', stateproduct2: product %>
+        <% end %> 
+     </div> 
+
+    <!--End State Products-->
+
+
+    <!--Chicago Highlights-->
+      <%#= render partial: 'welcomes/chicagohighlights' %>
+    <div class="state-container highlights">
+      <% @chicagohighlights.each_slice(6).each do |chicago| %>
+        <%= render 'chicagohighlights', chicagohighlights: chicago %>
+      <% end %>
+
+      <% @chicagohighlight2s.each_slice(6).each do |chicago| %>
+        <%= render 'chicagohighlights2', chicagohighlights2: chicago %>
+      <% end %>
+    </div>
+    <!--Chicago Highlights-->
+
+    <!--Specialize text-center-->
+      <%#= render partial: 'welcomes/textcenter' %>
+
+      <% @textcenters.each_slice(4).each do |text| %>
+        <%= render 'textcenter', textcenter: text %>
+      <% end %> 
+
+    <!--highlights insureonline-->
+      <%#= render partial: 'welcomes/highlightsinsureonline' %>
+
+      <% @highlights.each_slice(2).each do |highlight| %>
+          <%= render 'highlightsinsureonline', highlightsinsureonline: highlight %>
+      <% end %> 
+
+    <!--auto-insurance-section-->
+      <%#= render partial: 'welcomes/autoinsurance' %>
+        <% @autoinsurances.each_slice(5).each do |auto| %>
+            <%= render 'autoinsurance', autoinsurance: auto %>
+        <% end %> 
+
+
+    <div class="state-container article-source">
+      <h1>Article Sources</h1>
+      <p>1.Illinois Secretary of State. <span class="text-orange">Active Registration Counts – Cook County</span>,
+        December 2, 2022.</p>
+    </div>
+  </div>
+
+    <!--footer_section-->
+      <%= render partial: 'welcomes/footersection' %>
+
+</body>
+
+</html>
