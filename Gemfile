@@ -89,7 +89,7 @@ gem 'dragonfly'
 #gem for pdf generator
 gem 'prawn', '~> 1.2.1'
 gem 'prawn-table', '~> 0.1.0'
-# gem 'prawn_rails'
+gem 'prawn_rails'
 
 # gem 'responders'
 

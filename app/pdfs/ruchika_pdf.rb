@@ -14,9 +14,9 @@ class RuchikaPdf < Prawn::Document
         
     end
     def ruchika_id_all
-        [["title" , "body" , "image"]]+
+        [["title" , "body"]]+
         @ruchikas.map do |ruchika|
-            [ruchika.title,ruchika.body,ruchika.image]
+            [ruchika.title,ruchika.body]
         end
     end
 end

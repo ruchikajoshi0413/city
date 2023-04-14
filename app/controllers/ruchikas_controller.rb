@@ -3,24 +3,38 @@ class RuchikasController < InheritedResources::Base
   # require "pdfkit"
 
   def index 
+    # @ruchikas = Ruchika.all
     @ruchikas = Ruchika.order('id DESC').all
     respond_to do |format|
       format.html
       format.pdf do
           pdf = RuchikaPdf.new(@ruchikas)
-          # pdf = Prawn::Document.new
-          # pdf.text "Hello"
+                pdf = Prawn::Document.new
+                # pdf.text "Hello"
           send_data pdf.render , filename: 'sproduct.pdf', type: 'application/pdf', disposition: 'inline'
 
         
-            # send_data(sproducts_pdf, filename: 'sproduct.pdf', type: 'application/pdf')
+                # send_data(sproducts_pdf, filename: 'sproduct.pdf', type: 'application/pdf')
       end
-    end
   end
+   
+  end
+
+  # def show
+  #   respond_to do |format|
+  #     format.html
+  #     format.pdf do
+  #       render pdf: "Ruchika id: #{@ruchika.id}", 
+  #       template: "ruchikas/show.html.erb" 
+        
+  #     end
+  #   end
+  # end
+
   private
 
     def ruchika_params
-      params.require(:ruchika).permit(:title, :body, :image)
+      params.require(:ruchika).permit(:title, :body)
     end
 
   # def pdf
